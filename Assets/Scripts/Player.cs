@@ -47,14 +47,13 @@ public class Player : MonoBehaviour
 
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
         myAnimator.SetBool("Running", playerHasHorizontalSpeed);
-        myAnimator.SetBool("Climbing", !playerHasHorizontalSpeed);
 
     }
 
     private void Jump()
     {
-        myAnimator.SetBool("Running", false);
-        myAnimator.SetBool("Climbing", false);
+        //myAnimator.SetBool("Running", false);
+        //myAnimator.SetBool("Climbing", false);
 
         int layer = LayerMask.GetMask("Ground");
         bool isTouchingLayer = myCollider2D.IsTouchingLayers(layer);

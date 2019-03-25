@@ -3080,6 +3080,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1069050003 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95985176714538104, guid: af1ec154e4ef4df469a09f7b2d20b5e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 589435316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1069050004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4986651865742768, guid: af1ec154e4ef4df469a09f7b2d20b5e6,
@@ -12052,16 +12058,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8042120273381531967, guid: 45bb758fbb1d541b9a1cbd9aade348db,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8042120274199522797, guid: 45bb758fbb1d541b9a1cbd9aade348db,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 8042120274199522796, guid: 45bb758fbb1d541b9a1cbd9aade348db,
         type: 3}
       propertyPath: m_Follow
@@ -12072,10 +12068,31 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1477491383}
-    - target: {fileID: 8042120273132640012, guid: 45bb758fbb1d541b9a1cbd9aade348db,
+    - target: {fileID: 8652825956471423269, guid: 45bb758fbb1d541b9a1cbd9aade348db,
         type: 3}
-      propertyPath: m_CameraDistance
-      value: 1
+      propertyPath: m_ChildCameras.Array.size
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8652825956471423269, guid: 45bb758fbb1d541b9a1cbd9aade348db,
+        type: 3}
+      propertyPath: m_AnimatedTarget
+      value: 
+      objectReference: {fileID: 1069050003}
+    - target: {fileID: 1132513070, guid: 45bb758fbb1d541b9a1cbd9aade348db, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1069050004}
+    - target: {fileID: 1132513069, guid: 45bb758fbb1d541b9a1cbd9aade348db, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 1477491383}
+    - target: {fileID: 1930878320, guid: 45bb758fbb1d541b9a1cbd9aade348db, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1069050004}
+    - target: {fileID: 1930878319, guid: 45bb758fbb1d541b9a1cbd9aade348db, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 1477491383}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45bb758fbb1d541b9a1cbd9aade348db, type: 3}
