@@ -125,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4986651865742768, guid: af1ec154e4ef4df469a09f7b2d20b5e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 3.228
       objectReference: {fileID: 0}
     - target: {fileID: 4986651865742768, guid: af1ec154e4ef4df469a09f7b2d20b5e6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -202,7 +202,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1059369104}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &808807090
 TilemapRenderer:
@@ -3074,8 +3074,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1477491380}
   - {fileID: 808807089}
+  - {fileID: 1477491380}
   - {fileID: 1362890711}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -3370,7 +3370,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1059369104}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1477491381
 TilemapRenderer:
