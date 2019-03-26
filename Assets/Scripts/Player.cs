@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
+    [SerializeField] float waitTimeToSTop = 2;
 
     // State
     bool isAlive = true;
@@ -103,7 +104,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        int layer = LayerMask.GetMask("Enemy");
+        int layer = LayerMask.GetMask("Enemy", "Hazards");
         if (myBodyCollider2D.IsTouchingLayers(layer))
         {
             isAlive = false;
@@ -115,7 +116,7 @@ public class Player : MonoBehaviour
     }
     private IEnumerator WaitForAnimationToFinish()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(waitTimeToSTop);
         Time.timeScale = 0;
     }
 

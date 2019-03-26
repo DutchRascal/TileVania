@@ -156,6 +156,7 @@ MonoBehaviour:
   jumpSpeed: 28
   climbSpeed: 5
   deathKick: {x: 25, y: 25}
+  waitTimeToSTop: 2
 --- !u!61 &1762345146
 BoxCollider2D:
   m_ObjectHideFlags: 0
