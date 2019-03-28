@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
     // Config 
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
+    [SerializeField] float waitAfterDie = 2f;
     [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
 
     // State
@@ -22,7 +25,8 @@ public class Player : MonoBehaviour {
     float gravityScaleAtStart;
 
     // Message then methods
-    void Start() {
+    void Start()
+    {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
@@ -89,6 +93,7 @@ public class Player : MonoBehaviour {
             isAlive = false;
             myAnimator.SetTrigger("Dying");
             GetComponent<Rigidbody2D>().velocity = deathKick;
+            StartCoroutine(HandleDie());
         }
     }
 
@@ -99,6 +104,12 @@ public class Player : MonoBehaviour {
         {
             transform.localScale = new Vector2(Mathf.Sign(myRigidBody.velocity.x), 1f);
         }
+    }
+
+    private IEnumerator HandleDie()
+    {
+        yield return new WaitForSeconds(waitAfterDie);
+        SceneManager.LoadScene("Loose Menu");
     }
 
 }
