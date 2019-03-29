@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Success Menu.unity
     guid: fda5399b0694d4e4883f9048443137d3
+  - enabled: 1
+    path: Assets/Levels/Loose Menu.unity
+    guid: 94a1ddb84c6804733881fc09e99da821
   m_configObjects: {}

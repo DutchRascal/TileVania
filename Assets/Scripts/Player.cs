@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     CapsuleCollider2D myBodyCollider;
     BoxCollider2D myFeet;
     float gravityScaleAtStart;
+    GameSession gameSession;
 
     // Message then methods
     void Start()
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeet = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myRigidBody.gravityScale;
+        gameSession = FindObjectOfType<GameSession>();
     }
 
     // Update is called once per frame
@@ -109,7 +111,7 @@ public class Player : MonoBehaviour
     private IEnumerator HandleDie()
     {
         yield return new WaitForSeconds(waitAfterDie);
-        SceneManager.LoadScene("Loose Menu");
+        gameSession.ProcessPlayerDeath();
     }
 
 }
